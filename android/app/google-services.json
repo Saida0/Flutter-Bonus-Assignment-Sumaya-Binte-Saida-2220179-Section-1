@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1091219366074",
+    "project_id": "cse464-coffee-app-cc00e",
+    "storage_bucket": "cse464-coffee-app-cc00e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091219366074:android:9301ee8806e02e39622283",
+        "android_client_info": {
+          "package_name": "com.example.summer_iub_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtqB6q95XscWa8YISDousMjOAwOHZs1oM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

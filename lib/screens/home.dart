@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:summer_iub_app/screens/coffe_records_screen.dart';
 import 'package:summer_iub_app/screens/create_coffee_record_screen.dart';
+import 'package:summer_iub_app/screens/firebase_coffee_records_screen.dart';
 import 'package:summer_iub_app/state_management/coffee_state_management.dart';
 import 'package:summer_iub_app/widgets/app_backgroud_design_widget.dart';
 
@@ -36,6 +37,11 @@ class _HomePageState extends State<HomePage> {
    void navigateToCreateCoffeeRecordScreen() {
    Navigator.of(context)
    .push(MaterialPageRoute(builder: (context) =>  CreateCoffeeRecordScreen()));
+  }
+
+   void navigateToFirebaseCoffeeRecordsScreen() {
+   Navigator.of(context)
+   .push(MaterialPageRoute(builder: (context) =>  const FirebaseCoffeeRecordsScreen()));
   }
 
 
@@ -181,9 +187,37 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
       
+              SizedBox(height: 20.00),
+
+              // Open the live Firestore records screen (StreamBuilder).
+              ElevatedButton.icon(
+                onPressed: () {
+                  navigateToFirebaseCoffeeRecordsScreen();
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 30.00,
+                    vertical: 12.00,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                icon: Icon(Icons.cloud),
+                label: Text(
+                  "View Firebase Records (Live)",
+                  style: TextStyle(
+                    fontSize: 16.00,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
               SizedBox(height: 30.00),
-      
-      
+
+
               // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
               Text(
                   "How many coffee cups did you drink today?",

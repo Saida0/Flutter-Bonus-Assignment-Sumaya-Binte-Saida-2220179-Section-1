@@ -80,9 +80,12 @@ class CreateCoffeeRecordScreen extends StatelessWidget {
                         date: DateTime.now(),
                       );
             
+                      // Save locally (original demo behaviour)...
                       csm.addCoffeeRecord(newRecord);
-            
-            
+                      // ...and send the record to Firebase Firestore.
+                      csm.addCoffeeRecordToFirebase(newRecord);
+
+
                       titleController.clear();
                       amountController.clear();
                       descriptionController.clear();
